@@ -11,14 +11,16 @@
 </template>
 
 <script>
+	import { mapState, mapGetters } from 'vuex';
+
 	export default {
 		computed: {
-			products() {
-				return this.$store.state.products;
-			},
-			saleProducts() {
-				return this.$store.getters.saleProducts;
-			},
+			...mapState({
+				products: state => state.products.products
+			}),
+			...mapGetters({
+				saleProducts: 'products/saleProducts'
+			})
 		},
 	}
 </script>

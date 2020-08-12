@@ -8,23 +8,27 @@
 			</li>
 		</ul>
 		<button @click="reducePrice(4)">Reduce Price</button>
+		<button @click="increasePrice(4)">Increase Price</button>
 	</div>
 </template>
 
 <script>
+	import { mapState, mapActions, mapGetters } from 'vuex';
+
 	export default {
 		computed: {
-			products() {
-				return this.$store.state.products;
-			},
-			saleProducts() {
-				return this.$store.getters.saleProducts;
-			}
+			...mapState({
+				products: state => state.products.products
+			}),
+			...mapGetters({
+				saleProducts: 'products/saleProducts'
+			})
 		},
 		methods: {
-			reducePrice(amount) {
-				this.$store.dispatch('reducePrice', amount);
-			}
+			...mapActions({
+				reducePrice: 'products/reducePrice',
+				increasePrice: 'products/increasePrice'
+			}),
 		}
 	};
 </script>
