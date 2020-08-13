@@ -2,6 +2,8 @@ dependencies:
   axios: 0.19.2
   vue: 2.6.11
   vuex: 3.5.1_vue@2.6.11
+  vuex-cache: 3.3.0
+  vuex-persistedstate: 3.1.0_vue@2.6.11+vuex@3.5.1
 devDependencies:
   '@vue/cli-plugin-babel': 4.5.3_8839465a8340cbdc269eb1e3853da33d
   '@vue/cli-service': 4.5.3_8969d4ead7c2c15d0c77cfdcd3d48bb2
@@ -3096,6 +3098,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-95k0GDqvBjZavkuvzx/YqVLv/6YYa17fz6ILMSf7neqQITCPbnfEnQvEgMPNjH4kgobe7+WIL0yJEHku+H3qtQ==
+  /deepmerge/4.2.2:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
   /default-gateway/4.2.0:
     dependencies:
       execa: 1.0.0
@@ -7077,6 +7085,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
+  /shvl/2.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-VU7R5Uxp38LKHooGuZe0TcX2EPK95nn8DvclAvTPyD9/qHmXvt3dR2pJ4JLZ8uLjxQNQ3zNLFJCreteIj3cvpw==
   /signal-exit/3.0.3:
     dev: true
     resolution:
@@ -8026,6 +8038,22 @@ packages:
     dev: false
     resolution:
       integrity: sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
+  /vuex-cache/3.3.0:
+    dev: false
+    resolution:
+      integrity: sha512-z9VuO2TeP2/kBxR6eJR29wUiv1LM+iE35UgrPS561XP9DV2wXb27Wum6B+SdYXOaAuZZmJ1HPCdu9ZNfa02G3Q==
+  /vuex-persistedstate/3.1.0_vue@2.6.11+vuex@3.5.1:
+    dependencies:
+      deepmerge: 4.2.2
+      shvl: 2.0.1
+      vue: 2.6.11
+      vuex: 3.5.1_vue@2.6.11
+    dev: false
+    peerDependencies:
+      vue: ^2.0.0
+      vuex: ^2.0.0 || ^3.0.0
+    resolution:
+      integrity: sha512-nRiCe1qDdDrcveFQzTw0QGEj3dRpwN19BailSSwfhe4eUNNQ+9S/ApKnDEAuyw95cigOtSPciMEhdsC0qNUiKQ==
   /vuex/3.5.1_vue@2.6.11:
     dependencies:
       vue: 2.6.11
@@ -8380,3 +8408,5 @@ specifiers:
   vue: ^2.6.11
   vue-template-compiler: ^2.6.11
   vuex: ^3.5.1
+  vuex-cache: ^3.3.0
+  vuex-persistedstate: ^3.1.0
