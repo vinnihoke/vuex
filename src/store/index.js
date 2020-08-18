@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import createCache from 'vuex-cache';
 import createPersistedState from "vuex-persistedstate";
 import products from './modules/products.module';
 import kanyeism from './modules/kanyeism.module';
@@ -18,7 +17,6 @@ export default new Vuex.Store({
 		kanyeism
 	},
 	plugins: [
-		createCache(),
 		dataState
 	]
 })
